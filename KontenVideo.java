@@ -1,4 +1,4 @@
-package kuis1_pbo_kelompok2;
+
 public class KontenVideo extends Konten {
     private String jenisKonten;
     private String namaKonten;

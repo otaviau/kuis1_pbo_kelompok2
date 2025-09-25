@@ -1,4 +1,4 @@
-package kuis1_pbo_kelompok2;
+
 
 public class KontenKuis extends Konten {
     private String jenisKonten;

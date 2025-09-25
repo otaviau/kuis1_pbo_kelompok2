@@ -1,4 +1,4 @@
-package kuis1_pbo_kelompok2 ;
+
 public class Konten {
     private String idKonten;
 
