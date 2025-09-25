@@ -16,7 +16,7 @@ public class Menu {
             System.out.println("0. Logout");
             System.out.print("Pilih menu: ");
             pilihan = scanner.nextInt();
-            scanner.nextLine(); // buang newline
+            scanner.nextLine();
 
             if (pilihan == 1) {
                 System.out.print("Masukkan jenis konten: ");
@@ -51,7 +51,7 @@ public class Menu {
             System.out.println("0. Logout");
             System.out.print("Pilih menu: ");
             pilihan = scanner.nextInt();
-            scanner.nextLine(); // buang newline
+            scanner.nextLine();
 
             if (pilihan == 1) {
                 System.out.print("Masukkan nama konten: ");
