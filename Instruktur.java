@@ -1,8 +1,11 @@
 package kuis1_pbo_kelompok2;
 
+import java.util.ArrayList;
+
 public class Instruktur extends User {
     private String nama;
     private String keahlian;
+    private ArrayList<Konten> daftarKonten = new ArrayList<>();
 
     public Instruktur(String username, String password, String nama, String keahlian) {
         super(username, password);
@@ -10,25 +13,29 @@ public class Instruktur extends User {
         this.keahlian = keahlian;
     }
 
-    public void tambahKonten(String konten) {
-        System.out.println(nama + " menambahkan konten: " + konten);
-    }
-
-    public void tambahMateri(String materi) {
-        System.out.println(nama + " menambahkan materi: " + materi);
+    public void tambahKonten(Konten konten, ArrayList<Konten> semuaKonten) {
+        daftarKonten.add(konten);
+        semuaKonten.add(konten);
+        System.out.println(nama + " menambahkan konten: " + konten.getNamaKonten());
     }
 
     public void lihatKonten() {
-        System.out.println(nama + " melihat daftar konten");
-    }
+        System.out.println("\nKonten yang ditambahkan oleh " + nama + ":");
 
-    public void lihatMateri() {
-        System.out.println(nama + " melihat daftar materi");
+        if (daftarKonten.isEmpty()) {
+            System.out.println("Belum ada konten yang ditambahkan.");
+        } else {
+            for (Konten k : daftarKonten) {
+                k.tampilkanInfo();
+                System.out.println("------");
+            }
+        }
+
     }
 
     public void infoInstruktur() {
-        System.out.println("Instruktur:");
-        System.out.println("  Nama: " + nama);
+        System.out.println("\nInstruktur:");
+        System.out.println("  Nama    : " + nama);
         System.out.println("  Keahlian: " + keahlian);
         System.out.println("  Username: " + getUsername());
     }

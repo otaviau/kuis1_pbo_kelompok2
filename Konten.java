@@ -1,3 +1,4 @@
+package kuis1_pbo_kelompok2;
 
 public class Konten {
     private String idKonten;
@@ -8,6 +9,10 @@ public class Konten {
 
     public String getIdKonten() {
         return idKonten;
+    }
+
+    public String getNamaKonten() {
+        return "(Tidak diketahui)";
     }
 
     public void tampilkanInfo() {

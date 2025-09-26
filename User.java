@@ -26,7 +26,8 @@ public class User {
     }
 
     public boolean authenticate(String username, String password) {
-        if (this.username == null || this.password == null) return false;
+        if (this.username == null || this.password == null)
+            return false;
         return this.username.equals(username) && this.password.equals(password);
     }
 }
